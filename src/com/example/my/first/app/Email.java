@@ -39,7 +39,7 @@ public class Email extends Activity implements View.OnClickListener {
 
 		convertEditTextVarsIntoStringsAndYesThisIsAMethodWeCreated();
 		String emailaddress[] = { emailAdd };
-		String message = "Well hello "
+		String message = "Well hello hello hello!!!!!!!!!!!!!!!"
 				+ name
 				+ " I just wanted to say "
 				+ beginning
