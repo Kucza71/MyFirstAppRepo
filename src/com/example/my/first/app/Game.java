@@ -10,6 +10,7 @@ import android.view.Menu;
 
 public class Game extends Activity {
 
+// first update from web repository https://github.com/Kucza71/MyFirstAppRepo.git using shortcuts
 	Bitmap moon;
 	
     @Override
