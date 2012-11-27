@@ -38,7 +38,8 @@ public class Accelerate extends Activity implements SensorEventListener{
 		surface  = new MyViewSurface(this);
 		surface.resume();
 		setContentView(surface);
-		//m
+		//m 
+		
 	}
 
 	@Override
