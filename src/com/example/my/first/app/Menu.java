@@ -15,7 +15,7 @@ public class Menu extends ListActivity {
 	String options[] = { "MainActivity", "SecundoActivity", "Splash", "Email",
 			"Game", "GFX", "GFXSurface", "SoundStuff", "Slider", "ExternalData",
 			"sqlliteexample", "SQLView", "Accelerate",
-			"StartBouncing", "SurfaceViewActivity"};
+			"StartBouncing", "SurfaceViewActivity", "Dupa"};
 	
 
 	@Override

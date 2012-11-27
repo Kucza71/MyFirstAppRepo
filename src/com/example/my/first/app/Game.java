@@ -19,7 +19,8 @@ public class Game extends Activity {
         
         InputStream is = getResources().openRawResource(R.drawable.sky);
         moon = BitmapFactory.decodeStream(is);
-        
+        // int i = 0;
+        // dupadupa
         
     }
 
