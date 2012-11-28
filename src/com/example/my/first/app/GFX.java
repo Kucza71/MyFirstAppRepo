@@ -11,6 +11,7 @@ public class GFX extends Activity{
 	MyView ourView;
 	WakeLock wL;
 
+	// zmiany robione lokalnie - do wrzucenia na webowe repo
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
