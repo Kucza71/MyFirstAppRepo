@@ -115,16 +115,21 @@ class BallBounces extends SurfaceView implements SurfaceHolder.Callback {
 
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN: {
-                ballX = (int) ev.getX() - ballW/2;
-                ballY = (int) ev.getY() - ballH/2;
-
+                
+            	System.out.println("Ja x "+ ev.getX() + " y " + ev.getY()  +  "B x "+ ballX +" y "+ ballY);
+                System.out.println("tyle dodaje do x = " + (int) ((ev.getX() - (ballX + ballW/2))*0.01f));
+                System.out.println("tyle dodaje do y = " + (int) ((ev.getY() - (ballY + ballH/2))*0.01f));
+                
+            	ballX += (int) ((ev.getX() - (ballX + ballW/2))*0.01f);
+                ballY += (int) ((ev.getY() - (ballY + ballH/2))*0.01f);               
+                
                 ballFingerMove = true;
                 break;
             }
-
+//
             case MotionEvent.ACTION_MOVE: {
-                ballX = (int) ev.getX() - ballW/2;
-                ballY = (int) ev.getY() - ballH/2;
+                ballX += (int) ((ev.getX() - (ballX + ballW/2))*0.01f);
+                ballY += (int) ((ev.getY() - (ballY + ballH/2))*0.01f);     
 
                 break;
             }

@@ -15,7 +15,7 @@ public class Menu extends ListActivity {
 	String options[] = { "MainActivity", "SecundoActivity", "Splash", "Email",
 			"Game", "GFX", "GFXSurface", "SoundStuff", "Slider", "ExternalData",
 			"sqlliteexample", "SQLView", "Accelerate",
-			"StartBouncing", "SurfaceViewActivity", "Dupa","dupa2"};
+			"StartBouncing", "SurfaceViewActivity", "ReadWebpageAsyncTask", "ThreadsLifecycleActivity"};
 	
 
 	@Override
@@ -31,10 +31,10 @@ public class Menu extends ListActivity {
 
 		String chosenClass = options[position];
 		try {
-			Class secundo = Class.forName("com.example.my.first.app."
+			Class classtopen = Class.forName("com.example.my.first.app."
 					+ chosenClass);
 	
-			Intent intent = new Intent(Menu.this, secundo);
+			Intent intent = new Intent(Menu.this, classtopen);
 			startActivity(intent);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block

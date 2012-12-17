@@ -70,9 +70,7 @@ public class SecundoActivity extends Activity implements OnClickListener {
 		//loader.
 		
 		//new loadStuffFromFile.execute(FILENAME);
-		
-		
-		
+
 	}
 
 	@Override
