@@ -19,7 +19,7 @@ public class Email extends Activity implements View.OnClickListener {
 
 	EditText personsEmail, intro, personsName, stupidThings, hatefulAction,
 			outro;
-	TextView textViewClock;
+	static TextView textViewClock;
 	String emailAdd, beginning, name, stupidAction, hatefulAct, out;
 	Button sendEmail;
 	AnalogClock cl;
@@ -111,7 +111,7 @@ public class Email extends Activity implements View.OnClickListener {
 	}
 	
 	
-
+				      //or extends Thread - dla rozszerzenia mo¿liwoœci w¹tku - ogólnie lepiej u¿ywaæ Runnable.
 	public class MyUpdater implements Runnable {
 
 		public MyUpdater() {
@@ -123,29 +123,30 @@ public class Email extends Activity implements View.OnClickListener {
         	while (true) {
            // final int value = i;
             try {
-              Thread.sleep(2000);
+              Thread.sleep(1000);
             } catch (InterruptedException e) {
               e.printStackTrace();
             }
-            handler.post(new Runnable() {
-              @Override
-              public void run() {
-            	  Integer liczba = 0;
-  				try {
-  					System.out.println("bede parsowa³: " + textViewClock.getText().toString());
-  					liczba = Integer.parseInt(textViewClock.getText().toString());
-  					liczba++;
-  				}catch(Exception e) {
-  					e.printStackTrace();
-  				}
-  				textViewClock.setText( liczba+"" );
-                //progress.setProgress(value);
-              }
-            });
+            handler.post(new ProcessInteger());
           }
         }
 
 
 	}
 	
+	  static public class ProcessInteger implements Runnable {
+		  		  
+          public void run() {
+        	  Integer liczba = 0;
+				try {
+					System.out.println("bede parsowa³: " + textViewClock.getText().toString());
+					liczba = Integer.parseInt(textViewClock.getText().toString());
+					liczba++;
+				}catch(Exception e) {
+					e.printStackTrace();
+				}
+				textViewClock.setText( liczba+"" );
+            //progress.setProgress(value);
+          }
+		  }
 }
